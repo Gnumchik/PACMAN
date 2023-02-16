@@ -9,19 +9,38 @@ public class appel : MonoBehaviour
 
     [SerializeField] public TextMeshProUGUI _text;
     public static int _number = 0;
+    private GameObject player;
+    public int bonuskall = 114;
+
+    [SerializeField] public AudioClip audioClip;
+    private AudioSource audioSource;
+    private void Start()
+    {
+        _number = 0;
+        player = GameObject.FindGameObjectWithTag("Player");
+        audioSource = player.GetComponent<AudioSource>();
+        
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.gameObject.tag == "Player")
         {
             _number++;
             _text.text = _number.ToString();
+            audioSource.PlayOneShot(audioClip); 
+            
             Destroy(gameObject);
            
         }
-        if(_number == 112)
+
+
+        if(_number == bonuskall)
         {
             SceneManager.LoadScene(1);
         }
+
     }
 }
