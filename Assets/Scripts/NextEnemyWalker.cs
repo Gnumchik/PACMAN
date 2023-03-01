@@ -29,7 +29,6 @@ public class NextEnemyWalker : MonoBehaviour
 
         if (pointInPath.Current == null)
         {
-            Debug.Log("Need Points");
             return;
         }
 

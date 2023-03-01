@@ -67,6 +67,10 @@ public class Pers : MonoBehaviour
         {
             Health();
         }
+        if(collision.gameObject.tag == "Bonus")
+        {
+
+        }
     }
 
 
