@@ -16,16 +16,38 @@ public class Pers : MonoBehaviour
     public GameObject[] _number;
     public static Action Death;
 
+    public bool enamyEat = false;
+    public GameObject[] enemy;
+    public GameObject bonys;
+
+    public NextEnemyWalker[] nextEnemyWalker;
+
     [SerializeField] GameObject[] health;
 
     void Start()
     {
         _hp = 3;
     }
+    IEnumerator ExecuteAfterTime()
+    {
+        yield return new WaitForSeconds(3);
+        enamyEat = false;
+    }
 
     void Update()
     {
-        
+        if (enamyEat == false)
+        {
+            enemy[0].GetComponent<SpriteRenderer>().color = new Color(255, 165, 0);
+            enemy[1].GetComponent<SpriteRenderer>().color = new Color(0, 234, 255);
+            enemy[2].GetComponent<SpriteRenderer>().color = new Color(11, 255, 0);
+            enemy[3].GetComponent<SpriteRenderer>().color = new Color(255, 0, 205);
+        }
+        if(enamyEat == true)
+        {
+            StartCoroutine(ExecuteAfterTime());   
+        }
+
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
@@ -63,13 +85,25 @@ public class Pers : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if(collision.gameObject.tag == "Enemy" && enamyEat == false)
         {
             Health();
         }
         if(collision.gameObject.tag == "Bonus")
         {
-
+            enamyEat = true;
+            Destroy(bonys);
+            enemy[0].GetComponent<SpriteRenderer>().color = Color.blue;
+            enemy[1].GetComponent<SpriteRenderer>().color = Color.blue;
+            enemy[2].GetComponent<SpriteRenderer>().color = Color.blue;
+            enemy[3].GetComponent<SpriteRenderer>().color = Color.blue;
+        }
+        if (enamyEat == true && collision.gameObject.tag == "Enemy")
+        {
+            nextEnemyWalker[0].Start();
+            nextEnemyWalker[1].Start();
+            nextEnemyWalker[2].Start();
+            nextEnemyWalker[3].Start();
         }
     }
 
@@ -85,8 +119,11 @@ public class Pers : MonoBehaviour
         _number[_hp].SetActive(false);
         if (_hp <= 0)
         {
+
             Death?.Invoke();
+            
         }
+
         if (_hp <= 0)
         {
             SceneManager.LoadScene(2);

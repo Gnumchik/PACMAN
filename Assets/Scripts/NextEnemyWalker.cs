@@ -15,9 +15,9 @@ public class NextEnemyWalker : MonoBehaviour
     public float spped = 1;
     public float maxDistance = .1f;
 
-    private IEnumerator<Transform> pointInPath;
+    public IEnumerator<Transform> pointInPath;
 
-    void Start()
+    public void Start()
     {
         if(MyPath == null)
         {
@@ -37,7 +37,7 @@ public class NextEnemyWalker : MonoBehaviour
 
     }
 
-    void Update()
+     void Update()
     {
         if(pointInPath == null || pointInPath.Current == null)
         {
