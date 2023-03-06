@@ -17,7 +17,7 @@ public class NextEnemyWalker : MonoBehaviour
 
     public IEnumerator<Transform> pointInPath;
 
-    public void Start()
+    void Start()
     {
         if(MyPath == null)
         {
@@ -36,8 +36,12 @@ public class NextEnemyWalker : MonoBehaviour
 
 
     }
+    public void Spawn()
+    {
+        transform.position = pointInPath.Current.position;
+    }
 
-     void Update()
+    void Update()
     {
         if(pointInPath == null || pointInPath.Current == null)
         {

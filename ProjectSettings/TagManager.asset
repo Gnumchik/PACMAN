@@ -7,6 +7,14 @@ TagManager:
   - apell
   - Enemy
   - Bonus
+  - Enemy1
+  - Enemy2
+  - Enemy3
+  - Enemy4
+  - Bonus1
+  - Bonus2
+  - Bonus3
+  - Bonus4
   layers:
   - Default
   - TransparentFX

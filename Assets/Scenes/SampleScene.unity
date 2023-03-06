@@ -536,20 +536,7 @@ MonoBehaviour:
   pathTypes: 1
   movmentDirection: 1
   movingTo: 0
-  PathElements:
-  - {fileID: 1804603095}
-  - {fileID: 542655658}
-  - {fileID: 1233971192}
-  - {fileID: 180124021}
-  - {fileID: 464131370}
-  - {fileID: 2072139769}
-  - {fileID: 1376922681}
-  - {fileID: 440498385}
-  - {fileID: 1306899893}
-  - {fileID: 1912277083}
-  - {fileID: 771538173}
-  - {fileID: 285790064}
-  - {fileID: 1487700433}
+  PathElements: []
 --- !u!4 &34516235
 Transform:
   m_ObjectHideFlags: 0
@@ -768,17 +755,7 @@ MonoBehaviour:
   pathTypes: 1
   movmentDirection: 1
   movingTo: 0
-  PathElements:
-  - {fileID: 341655800}
-  - {fileID: 381918783}
-  - {fileID: 1307872179}
-  - {fileID: 1975101827}
-  - {fileID: 1885231170}
-  - {fileID: 216719555}
-  - {fileID: 1161804111}
-  - {fileID: 1691100614}
-  - {fileID: 1610848640}
-  - {fileID: 1928822119}
+  PathElements: []
 --- !u!4 &107634969
 Transform:
   m_ObjectHideFlags: 0
@@ -3072,7 +3049,7 @@ GameObject:
   - component: {fileID: 353533191}
   m_Layer: 0
   m_Name: Enemy (3)
-  m_TagString: Enemy
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7023,7 +7000,7 @@ GameObject:
   - component: {fileID: 747642440}
   m_Layer: 0
   m_Name: Enemy (2)
-  m_TagString: Enemy
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8859,7 +8836,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889599366}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0ef660ccb7d4a3a488be520d984009bf, type: 3}
@@ -10517,7 +10494,7 @@ GameObject:
   - component: {fileID: 994894564}
   m_Layer: 0
   m_Name: Enemy (1)
-  m_TagString: Enemy
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10807,14 +10784,7 @@ MonoBehaviour:
   pathTypes: 1
   movmentDirection: 1
   movingTo: 0
-  PathElements:
-  - {fileID: 76882704}
-  - {fileID: 1594269020}
-  - {fileID: 1478867877}
-  - {fileID: 1813680079}
-  - {fileID: 1785083338}
-  - {fileID: 1542167027}
-  - {fileID: 2069494348}
+  PathElements: []
 --- !u!4 &1019852974
 Transform:
   m_ObjectHideFlags: 0
@@ -16391,7 +16361,7 @@ GameObject:
   - component: {fileID: 1555545020}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Enemy
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

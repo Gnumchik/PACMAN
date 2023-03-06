@@ -10,7 +10,7 @@ public class appel : MonoBehaviour
     [SerializeField] public TextMeshProUGUI _text;
     public static int _number = 0;
     private GameObject player;
-    public int bonuskall = 114;
+    public int bonuskall = 177;
 
     [SerializeField] public AudioClip audioClip;
     private AudioSource audioSource;
@@ -30,7 +30,6 @@ public class appel : MonoBehaviour
         {
             _number++;
             _text.text = _number.ToString();
-            audioSource.PlayOneShot(audioClip); 
             
             Destroy(gameObject);
            

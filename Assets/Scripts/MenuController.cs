@@ -19,12 +19,12 @@ public class MenuController : MonoBehaviour
 
     public void PlayAgain()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(4);
     }
 
     public void Menu()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(0);
     }
 
     public void Settings()

@@ -18,7 +18,7 @@ public class Pers : MonoBehaviour
 
     public bool enamyEat = false;
     public GameObject[] enemy;
-    public GameObject bonys;
+    public GameObject[] bonys;
 
     public NextEnemyWalker[] nextEnemyWalker;
 
@@ -38,10 +38,10 @@ public class Pers : MonoBehaviour
     {
         if (enamyEat == false)
         {
-            enemy[0].GetComponent<SpriteRenderer>().color = new Color(255, 165, 0);
-            enemy[1].GetComponent<SpriteRenderer>().color = new Color(0, 234, 255);
-            enemy[2].GetComponent<SpriteRenderer>().color = new Color(11, 255, 0);
-            enemy[3].GetComponent<SpriteRenderer>().color = new Color(255, 0, 205);
+            enemy[0].GetComponent<SpriteRenderer>().color = new Color(255, 255, 0);
+            enemy[1].GetComponent<SpriteRenderer>().color = new Color(0, 255, 255);
+            enemy[2].GetComponent<SpriteRenderer>().color = new Color(255, 255, 0);
+            enemy[3].GetComponent<SpriteRenderer>().color = new Color(255, 0, 255);
         }
         if(enamyEat == true)
         {
@@ -85,25 +85,73 @@ public class Pers : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy" && enamyEat == false)
+        if(collision.gameObject.tag == "Enemy1" && enamyEat == false)
         {
             Health();
         }
-        if(collision.gameObject.tag == "Bonus")
+        if (collision.gameObject.tag == "Enemy2" && enamyEat == false)
+        {
+            Health();
+        }
+        if (collision.gameObject.tag == "Enemy3" && enamyEat == false)
+        {
+            Health();
+        }
+        if (collision.gameObject.tag == "Enemy4" && enamyEat == false)
+        {
+            Health();
+        }
+        if (collision.gameObject.tag == "Bonus")
         {
             enamyEat = true;
-            Destroy(bonys);
+            Destroy(bonys[0]);
             enemy[0].GetComponent<SpriteRenderer>().color = Color.blue;
             enemy[1].GetComponent<SpriteRenderer>().color = Color.blue;
             enemy[2].GetComponent<SpriteRenderer>().color = Color.blue;
             enemy[3].GetComponent<SpriteRenderer>().color = Color.blue;
         }
-        if (enamyEat == true && collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Bonus2")
         {
-            nextEnemyWalker[0].Start();
-            nextEnemyWalker[1].Start();
-            nextEnemyWalker[2].Start();
-            nextEnemyWalker[3].Start();
+            enamyEat = true;
+            Destroy(bonys[1]);
+            enemy[0].GetComponent<SpriteRenderer>().color = Color.blue;
+            enemy[1].GetComponent<SpriteRenderer>().color = Color.blue;
+            enemy[2].GetComponent<SpriteRenderer>().color = Color.blue;
+            enemy[3].GetComponent<SpriteRenderer>().color = Color.blue;
+        }
+        if (collision.gameObject.tag == "Bonus3")
+        {
+            enamyEat = true;
+            Destroy(bonys[2]);
+            enemy[0].GetComponent<SpriteRenderer>().color = Color.blue;
+            enemy[1].GetComponent<SpriteRenderer>().color = Color.blue;
+            enemy[2].GetComponent<SpriteRenderer>().color = Color.blue;
+            enemy[3].GetComponent<SpriteRenderer>().color = Color.blue;
+        }
+        if (collision.gameObject.tag == "Bonus4")
+        {
+            enamyEat = true;
+            Destroy(bonys[3]);
+            enemy[0].GetComponent<SpriteRenderer>().color = Color.blue;
+            enemy[1].GetComponent<SpriteRenderer>().color = Color.blue;
+            enemy[2].GetComponent<SpriteRenderer>().color = Color.blue;
+            enemy[3].GetComponent<SpriteRenderer>().color = Color.blue;
+        }
+        if (enamyEat == true && collision.gameObject.tag == "Enemy1")
+        {
+            nextEnemyWalker[0].Spawn();
+        }
+        if (enamyEat == true && collision.gameObject.tag == "Enemy2")
+        {
+            nextEnemyWalker[1].Spawn();
+        }
+        if (enamyEat == true && collision.gameObject.tag == "Enemy3")
+        {
+            nextEnemyWalker[2].Spawn();
+        }
+        if (enamyEat == true && collision.gameObject.tag == "Enemy4")
+        {
+            nextEnemyWalker[3].Spawn();
         }
     }
 
