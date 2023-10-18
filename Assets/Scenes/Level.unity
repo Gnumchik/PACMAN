@@ -8693,6 +8693,7 @@ MonoBehaviour:
   MyPath: {fileID: 1414020244}
   spped: 3
   maxDistance: 0.23
+  spawnPoint: {fileID: 1082025440}
 --- !u!50 &672281137
 Rigidbody2D:
   serializedVersion: 4
@@ -12221,6 +12222,7 @@ MonoBehaviour:
   MyPath: {fileID: 698203625}
   spped: 3
   maxDistance: 0.23
+  spawnPoint: {fileID: 1082025440}
 --- !u!50 &953943528
 Rigidbody2D:
   serializedVersion: 4
@@ -13987,6 +13989,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1082025440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1082025441}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1082025441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082025440}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.66, y: -0.03, z: 0.7136164}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1085770379
 GameObject:
   m_ObjectHideFlags: 0
@@ -17803,6 +17836,7 @@ MonoBehaviour:
   MyPath: {fileID: 1085770380}
   spped: 3
   maxDistance: 0.23
+  spawnPoint: {fileID: 1082025440}
 --- !u!50 &1314993595
 Rigidbody2D:
   serializedVersion: 4
@@ -18197,6 +18231,7 @@ MonoBehaviour:
   MyPath: {fileID: 1057347559}
   spped: 3
   maxDistance: 0.23
+  spawnPoint: {fileID: 1082025440}
 --- !u!50 &1322429018
 Rigidbody2D:
   serializedVersion: 4

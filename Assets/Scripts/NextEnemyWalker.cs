@@ -14,6 +14,7 @@ public class NextEnemyWalker : MonoBehaviour
     public EnemyWalker MyPath;
     public float spped = 1;
     public float maxDistance = .1f;
+    [SerializeField] private GameObject spawnPoint;
 
     public IEnumerator<Transform> pointInPath;
 
@@ -38,7 +39,7 @@ public class NextEnemyWalker : MonoBehaviour
     }
     public void Spawn()
     {
-        transform.position = pointInPath.Current.position;
+        transform.position = spawnPoint.transform.position;
     }
 
     void Update()
